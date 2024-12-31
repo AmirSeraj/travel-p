@@ -57,7 +57,6 @@ function App() {
     formState: { errors },
   } = useForm<IFormInput>();
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log(data);
     setFormState((prev) => ({
       ...prev,
       items: [

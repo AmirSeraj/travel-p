@@ -76,7 +76,6 @@ function App() {
     <div className="app">
       <Header />
       <main className="flex flex-grow flex-col">
-        {/* <Form setFormState={setFormState} /> */}
         <form className="flex gap-1" onSubmit={handleSubmit(onSubmit)}>
           <Form register={register} errors={errors} />
         </form>

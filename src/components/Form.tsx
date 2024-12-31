@@ -1,23 +1,9 @@
 import { Select, SelectItem } from "@nextui-org/select";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/react";
-import {
-  FieldErrors,
-  // SubmitHandler,
-  // useForm,
-  UseFormRegister,
-} from "react-hook-form";
+import { FieldErrors, UseFormRegister } from "react-hook-form";
 
 const numbers = Array.from({ length: 10 }, (_, i) => (i + 1).toString());
-
-// interface CustomFormState {
-//   items: Array<{
-//     num: string;
-//     item: string;
-//     isSelected: boolean;
-//     id: number;
-//   }>;
-// }
 
 interface IFormInput {
   num: string;
@@ -27,31 +13,9 @@ interface IFormInput {
 type FormProps = {
   register: UseFormRegister<IFormInput>;
   errors: FieldErrors<IFormInput>;
-  // setFormState: React.Dispatch<React.SetStateAction<CustomFormState>>;
 };
 
 export default function Form({ register, errors }: FormProps) {
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm<IFormInput>();
-  // const onSubmit: SubmitHandler<IFormInput> = (data) => {
-  //   console.log(data);
-  //   setFormState((prev) => ({
-  //     ...prev,
-  //     items: [
-  //       ...prev.items,
-  //       {
-  //         num: data.num,
-  //         item: data.item,
-  //         isSelected: false,
-  //         id: Date.now(), // Use a unique ID
-  //       },
-  //     ],
-  //   }));
-  // };
-
   return (
     <div className="bg-orange-700 w-full h-48 py-4 flex items-center justify-center gap-2">
       <p>What do you need for your trip?</p>
